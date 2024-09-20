@@ -1,0 +1,31 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Georgia', serif; 
+    background-color: #9cd7ff;
+    color: #ffffff;
+    text-align: center;
+}
+
+header {
+    background-image: url('images/header.jpg');
+    padding: 150px 0;
+    text-align: center;
+    color: #e4dede;
+    font-size: xx-large; 
+}
+
+.overlay {
+    background-color: rgba(255, 255, 255, 0.5);  
+    color: rgb(25, 22, 168);
+}
+
+nav {
+    font-size: x-large;
+    margin-top: 20px;
+    align-items: center;
+} 
