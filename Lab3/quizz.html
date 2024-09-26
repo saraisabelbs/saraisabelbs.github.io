@@ -24,20 +24,19 @@
         
             <h2>Quizz</h2>
 
-        <main>
+        <form>
             <fieldset>
-                <br>
                 <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome"><br><br>
+                <input type="text" placeholder="Digite o seu nome" name="nome" id="nome">
                 
                 <label for="apelido">Apelido:</label>
-                <input type="text" name="apelido" id="apelido"><br><br>
+                <input type="text" placeholder="Digite o seu apelido" name="apelido" id="apelido">
 
                 <label for="email">Email:</label>
-                <input type="text" name="email" id="email"><br><br>
+                <input type="text" autocomplete="on" placeholder="Digite o seu email" size="45" name="email" id="email">
            
                 <label for="text">Coloque o dia e a hora em que se encontra:</label>
-                <br>
+            
                 <input type="date" name="date" value="date">
                 <input type="time" name="time" value="time">
 
@@ -69,11 +68,19 @@
             </fieldset>
 
             <fieldset>
+                <label for="color">Coloque a cor do cabelo de Venús</label> <br><br>
                 <input type="color" name="color" placeholder="color">
 
 
             </fieldset>
-        </main>
+
+            <fieldset>
+                <label for="number">Quantas ilhas da Grécia são habitadas?</label> <br><br>
+                    <label for="quantity">(o número está entre 100 e 300):</label>
+                    <input type="number" id="quantity" name="quantity" min="100" max="300">
+                
+            </fieldset>
+        </form>
             
 
             <footer><br></footer>
