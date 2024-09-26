@@ -60,3 +60,21 @@ table{
 li{
     color: rgb(56, 158, 158);
 }
+
+main{
+    border: 2px solid #2001aa;
+    padding: 20px;       
+    margin-bottom: 20px;    
+    border-radius: 10px;  
+}
+
+fieldset{
+    border: 2px solid #2001aa;
+    padding: 20px;       
+    margin-bottom: 20px;    
+    border-radius: 10px;  
+    background-color: rgb(230, 243, 255);
+    color: #2001aa;
+    font-size: large; 
+
+}
