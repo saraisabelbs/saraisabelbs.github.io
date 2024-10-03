@@ -7,7 +7,7 @@
 body {
     font-family: 'Georgia', serif; 
     background-color: #98ccc2;
-    color: #112075da;
+    color: #ffffffda;
     text-align: center;
     font-size: x-large; 
   
@@ -30,14 +30,13 @@ nav {
     background-color:#527E7F;
     font-size: x-large;
     padding: 20px 0;
-
-   
   
 } 
 
 img {
-    display: block;
     margin: 0 auto;
+    width: 609px;
+    padding: 20px;
 }
 
 iframe{
@@ -82,3 +81,15 @@ fieldset{
 
 }
 
+
+footer{
+    background-color:#527E7F;
+
+}
+
+section {
+    background-color: rgb(131, 187, 155);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+}
