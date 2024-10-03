@@ -1,0 +1,84 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Georgia', serif; 
+    background-color: #98ccc2;
+    color: #112075da;
+    text-align: center;
+    font-size: x-large; 
+  
+}
+
+header {
+    background-image: url('images/header.jpg');
+    padding: 150px 0;
+    text-align: center;
+    color: #e4dede;
+    font-size: xx-large; 
+}
+
+.overlay {
+    background-color: rgba(255, 255, 255, 0.5);  
+    color: rgb(25, 22, 168);
+}
+
+nav {
+    background-color:#527E7F;
+    font-size: x-large;
+    padding: 20px 0;
+
+   
+  
+} 
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+iframe{
+    width: 600px;
+    height: 600px;
+
+}
+
+p img {
+    display: inline-block; /* Exibe as imagens como blocos inline */
+    margin-right: 10px; /* Adiciona espaço entre as imagens */
+    vertical-align: top; /* Garante que as imagens alinhem-se pelo topo */
+}
+
+table{
+    border: #000000;
+    background-color: rgb(230, 243, 255);
+    margin: 0 auto;
+    width: 30%;
+}
+
+li{
+    color: rgb(56, 158, 158);
+}
+
+form {
+    background-color: rgb(241, 236, 165);
+    border: 2px solid #2001aa;
+    padding: 20px;       
+    margin-bottom: 20px;    
+    border-radius: 10px;  
+}
+
+fieldset{
+    border: 2px solid #2001aa;
+    padding: 20px;       
+    margin-bottom: 20px;    
+    border-radius: 10px;  
+    background-color: rgb(235, 246, 255);
+    color: #2001aa;
+    font-size: large; 
+
+}
+

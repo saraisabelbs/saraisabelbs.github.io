@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cidade</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header>
+            <div class="overlay">
+            <h1>Grécia</h1>
+        </header>
+        <main>
+            
+            <nav>
+            <a href="index.html">Home</a>
+            <a href="local.html">Localização</a>
+            <a href="multimedia.html">Multimédia</a>
+            <a href="info.html">Informação</a>
+            <a href="quizz.html">Quizz</a>
+            <a href="viagem.html">Viagem</a>
+            </nav>
+        
+            <h2>Viagem</h2>
+    
+            <form method="post" action="/submit-viagem" enctype="multipart/form-data">
+                <fieldset>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required>
+
+                    <label for="apelido">Apelido:</label>
+                    <input type="text" id="apelido" name="apelido" placeholder="Digite o seu apelido" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Digite o seu email" autocomplete="on" required>
+                </fieldset>
+
+                <fieldset>
+                    <label for="partida">Data de Partida:</label>
+                    <input type="date" id="partida" name="partida" required>
+
+                    <label for="regresso">Data de Regresso:</label>
+                    <input type="date" id="regresso" name="regresso">
+                </fieldset>
+
+                <fieldset>
+                    <label for="passageiros">Número de Passageiros:</label>
+                    <input type="number" id="passageiros" name="passageiros" min="1" max="10">
+
+                    <label for="transporte">Meio de Transporte Favorito:</label>
+                    <select id="transporte" name="transporte" required>
+                        <option value="carro">Carro</option>
+                        <option value="comboio">Comboio</option>
+                        <option value="aviao">Avião</option>
+                        <option value="navio">Navio</option>
+                        <option value="outro">Outro</option>
+                    </select>
+
+                    <p>Qual o tipo de serviço que deseja na viagem?</p>
+                    <input type="radio" id="basico" name="servico" value="basico" >
+                    <label for="basico">Básico</label>
+
+                    <input type="radio" id="premium" name="servico" value="premium">
+                    <label for="premium">Premium</label>
+                </fieldset>
+
+                <fieldset>
+                    <label for="pedidos">Deixe aqui os pedidos especiais:</label><br>
+                    <textarea id="pedidos" name="pedidos" rows="4" cols="50" placeholder="Escreva aqui qualquer pedido especial..." maxlength="250"></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <label for="valor">Valor esperado por pessoa e por dia (€):</label>
+                    <input type="number" id="valor" name="valor" placeholder="Ex: 50" min="0" step="5">
+                </fieldset>
+
+                <input type="submit" value="Submeter">
+            </form>
+        </main>
+
+
+        <footer>
+            <br><br>
+            <p>DIW 2024</p>
+        </footer>
+    </body>
+</html>
