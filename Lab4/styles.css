@@ -93,3 +93,8 @@ section {
     padding: 20px;
     margin: 20px;
 }
+
+a:hover {
+    background-color: #b1e5fa;
+    color: black;
+}
