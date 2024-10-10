@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cidade</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header>
+            <div class="overlay">
+            <h1>Grécia</h1>
+        </header>
+        <main>
+            
+            <nav>
+            <a href="index.html">Home</a>
+            <a href="local.html">Localização</a>
+            <a href="multimedia.html">Multimédia</a>
+            <a href="info.html">Informação</a>
+            <a href="quizz.html">Quizz</a>
+            <a href="viagem.html">Viagem</a>
+            <a href="pontosinteresse.html">Pontos</a>
+            </nav>
+        
+        
+            <h2>Quizz</h2>
+
+            <form method="get" action="https://postman-echo.com/get">
+                <fieldset>
+                    <label for="nome">Nome:</label>
+                    <input type="text" placeholder="Digite o seu nome" name="nome" id="nome" required>
+
+                    <label for="apelido">Apelido:</label>
+                    <input type="text" placeholder="Digite o seu apelido" name="apelido" id="apelido" required>
+
+                    <label for="email">Email:</label>
+                    <input type="text" autocomplete="on" placeholder="Digite o seu email" size="45" name="email" id="email" required maxlength="50">
+                
+                    <label for="data">Coloque o dia e a hora em que se encontra:</label>
+                    <input type="date" name="data" required>
+                    <input type="time" name="hora" required>
+
+                    <label for="cor">Escolha uma cor que te lembra a Grécia:</label>
+                    <input type="color" name="cor" id="cor" required>
+                </fieldset>
+
+                <fieldset>
+                    <label>A Grécia possui mais de 1.000 ilhas habitadas?</label>
+                    <input type="radio" name="ilhas" value="verdadeiro" id="verdadeiro" required> 
+                    <label for="verdadeiro">Verdadeiro</label>
+                    <input type="radio" name="ilhas" value="falso" id="falso">
+                    <label for="falso">Falso</label>
+                </fieldset>
+
+                <fieldset>
+                    <label>Quais destes são pratos típicos da culinária grega?</label>
+                    <input type="checkbox" name="pratos" value="moussaka" id="moussaka">
+                    <label for="moussaka">Moussaka</label>
+
+                    <input type="checkbox" name="pratos" value="souvlaki" id="souvlaki">
+                    <label for="souvlaki">Souvlaki</label>
+
+                    <input type="checkbox" name="pratos" value="pizza" id="pizza">
+                    <label for="pizza">Pizza</label>
+
+                    <input type="checkbox" name="pratos" value="tzatziki" id="tzatziki">
+                    <label for="tzatziki">Tzatziki</label>
+                </fieldset>
+
+                <fieldset>
+                    <label for="number">Quantas ilhas da Grécia são habitadas?</label>
+                    <input type="number" id="quantidade" name="quantidade" min="100" max="300" step="10" required>
+                </fieldset>
+
+                <fieldset>
+                    <label for="range">Qual a  avaliação sobre o quão conhecedor és da Grécia (0-10)?</label>
+                    <input type="range" id="conhecimento" name="conhecimento" min="0" max="10" step="1">
+                </fieldset>
+
+                <fieldset>
+                    <label>Envie uma imagem que te lembra a Grécia:</label>
+
+                    <label for="imagem">Escolha uma imagem:</label>
+                    <input type="file" id="imagem" name="imagem" accept="image/*" required>
+
+                </fieldset>
+
+                <input type="reset" value="Limpar">
+                <input type="submit" value="Submeter">
+            </form>
+
+            <footer>
+                <br><br>
+                <p>DIW 2024</p>
+            </footer>
+    </body>
+</html>

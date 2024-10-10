@@ -1,0 +1,126 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Georgia', serif; 
+    background-color: #98ccc2;
+    color: #1c0581da;
+    text-align: center;
+    font-size: x-large; 
+  
+}
+
+header {
+    background-image: url('images/header.jpg');
+    padding: 150px 0;
+    text-align: center;
+    color: #dfdee4;
+    font-size: xx-large; 
+}
+
+.overlay {
+    background-color: rgba(255, 255, 255, 0.5);  
+    color: rgb(25, 22, 168);
+}
+
+nav {
+    background-color:#527E7F;
+    font-size: x-large;
+    padding: 20px 0;
+  
+} 
+
+img {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.fotografias img {
+    width: 609px;
+}
+
+.home img {
+    width: 609px;
+}
+
+iframe{
+    width: 700px;
+    height: 450px;
+
+}
+
+table{
+    border: #000000;
+    background-color: rgb(230, 243, 255);
+    margin: 0 auto;
+    width: 30%;
+}
+
+li{
+    color: rgb(248, 255, 255);
+}
+
+form {
+    background-color: rgb(241, 236, 165);
+    border: 2px solid #2001aa;
+    padding: 20px;       
+    margin-bottom: 20px;    
+    border-radius: 10px;  
+}
+
+fieldset{
+    border: 2px solid #2001aa;
+    padding: 20px;       
+    margin-bottom: 20px;    
+    border-radius: 10px;  
+    background-color: rgb(235, 246, 255);
+    color: #2001aa;
+    font-size: large; 
+
+}
+
+
+footer{
+    background-color:#527E7F;
+
+}
+
+section {
+    background-color: rgb(137, 196, 176);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    
+}
+
+a:hover {
+    background-color: #b1e5fa;
+    color: black;
+}
+
+
+.foto {
+    text-align: center; /* Centraliza o texto abaixo de cada imagem */
+}
+
+.foto img {
+    max-width: 100%; /* Garante que as imagens não ultrapassem o container */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+.fotografias {
+    padding: 20px;
+    border: 100px;
+    border-radius: 40px;
+    color: rgb(38, 48, 185);
+    text-align: center;
+    display: flex;
+
+}
+
+
+
