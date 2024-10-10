@@ -94,3 +94,26 @@ a:hover {
     color: black;
 }
 
+
+.foto {
+    text-align: center; /* Centraliza o texto abaixo de cada imagem */
+}
+
+.foto img {
+    max-width: 100%; /* Garante que as imagens não ultrapassem o container */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+.fotografias {
+    padding: 20px;
+    border: 100px;
+    border-radius: 40px;
+    color: rgb(38, 48, 185);
+    text-align: center;
+    display: flex;
+
+}
+
+
+
