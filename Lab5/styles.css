@@ -123,4 +123,34 @@ a:hover {
 }
 
 
+.iframeSpotify {
+    width: 60%;
+    height: 152px;
+}
 
+.frase-original {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.traducao {
+    visibility: hidden;
+    background-color: rgb(64, 181, 202);
+    color: #333;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    white-space: nowrap; /* Impede que a tradução quebre linhas */
+}
+
+.frase-original:hover .traducao {
+    visibility: visible;
+    opacity: 1;
+}
