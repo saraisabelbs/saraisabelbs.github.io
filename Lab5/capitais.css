@@ -1,0 +1,85 @@
+* {
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box; /* medidas são tomadas da borda */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #333; /* Cor de fundo do cabeçalho */
+    color: white;
+    padding: 10px 20px;
+}
+
+nav a {
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:last-child {
+    background-color: #555; 
+}
+
+nav a:link {
+    color: white;
+}
+
+nav a:visited {
+    color: #ccc;
+}
+
+nav a:hover {
+    color: rgb(21, 9, 138);
+}
+
+nav a:active {
+    color: rgb(63, 189, 100);
+}
+
+#poema-article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;
+    text-align: center;
+}
+
+.poema-conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.poema {
+    font-size: 1.5em;
+    line-height: 1.8;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.poeta {
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: normal;
+    color: #555; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #8caff0; 
+}
+
+#paisagem {
+    text-align: center;
+    margin: 20px 0;
+}
