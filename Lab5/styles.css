@@ -250,3 +250,69 @@ td:nth-child(2) {
 td:nth-child(3) {
     text-align: center;
 }
+
+
+.zoom {
+    cursor: zoom-in;
+    transition: transform 0.3s ease; 
+}
+
+
+.zoom:hover {
+    transform: scale(1.4); 
+
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5em;
+    padding: 10px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+nav a:link {
+    color: #ffffff;
+}
+
+nav a:visited {
+    color: #dcdcdc;
+}
+
+nav a:hover {
+    color: #57ffe3;
+}
+
+nav a:active {
+    color: #4733ff;
+}
+
+
+nav a i {
+    margin-right: 8px;
+}
+
+
+nav a:hover::before {
+    content: "🏛️ ";
+    transition: all 0.3s ease;
+}
+
+nav a:hover::after {
+    content: " 🏛️";
+    transition: all 0.3s ease;
+}
+
+/* Estilizar o menu */
+nav {
+    background-color: #527E7F;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #3c6566;
+    color: #fff;
+    border-radius: 10px;
+}
