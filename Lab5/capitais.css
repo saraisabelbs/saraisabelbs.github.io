@@ -44,7 +44,7 @@ nav a:active {
     color: rgb(63, 189, 100);
 }
 
-#poema-article {
+.poema-article {
     display: flex;
     justify-content: center;
     align-items: center;
