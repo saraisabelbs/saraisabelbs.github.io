@@ -266,3 +266,45 @@ h1 {
 nav{
     animation: fadeInBounce 2.5s ease-in-out;
 }
+
+.galeria-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Para manter um bom espaçamento */
+}
+
+.galeria-container div {
+    margin: 10px; /* Espaçamento entre as fotos */
+    overflow: hidden; /* Para esconder partes da imagem ao fazer a transição */
+    position: relative; /* Necessário para efeitos posicionados */
+}
+
+.galeria-container img {
+    width: 300px; /* Largura da imagem */
+    height: 200px; /* Altura da imagem */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transição suave */
+}
+
+.foto-efeito:hover img {
+    opacity: 0.8; /* Efeito de transparência ao passar o mouse */
+}
+
+.foto-transformacao:hover img {
+    transform: scale(1.1); /* Aumentar a imagem ao passar o mouse */
+}
+
+.foto-transicao:hover img {
+    filter: brightness(0.8); /* Efeito de brilho ao passar o mouse */
+}
+
+/* Efeito adicional para uma das imagens em cada grupo */
+.foto-efeito img {
+    filter: grayscale(100%); /* Aplicar escala de cinza na imagem */
+    transition: filter 0.3s ease;
+}
+
+.foto-efeito:hover img {
+    filter: grayscale(0%); /* Retornar à cor original ao passar o mouse */
+}
+
+
