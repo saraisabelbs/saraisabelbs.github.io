@@ -190,3 +190,79 @@ section div {
 .icon-container i:hover {
     color: #a8ccfc;
 }
+
+#parallax {
+    position: relative;
+    height: 400px; /* Ajuste a altura conforme necessário */
+    overflow: hidden;
+}
+
+.parallax-container {
+    background-image: url('images/beach-6354498_1280.jpg'); /* Insira o caminho para a sua imagem */
+    background-attachment: fixed; /* Isso cria o efeito parallax */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.parallax-text {
+    position: absolute;
+    color: white;
+    text-align: center;
+    z-index: 1; /* Para garantir que o texto fique acima da imagem */
+}
+
+.parallax-text h2 {
+    font-size: 2.5em; /* Ajuste o tamanho da fonte conforme necessário */
+}
+
+.parallax-text p {
+    font-size: 1.2em; /* Ajuste o tamanho da fonte conforme necessário */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    margin: 30px;
+}
+
+article.parallax {
+    background-image: url("https://cdn.pixabay.com/photo/2017/06/29/21/36/beach-2456298_1280.jpg"); /* Imagem de exemplo */
+    min-height: 400px; /* Ajuste a altura conforme necessário */
+    background-attachment: fixed; /* Isso cria o efeito parallax */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+@keyframes fadeInBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    animation: fadeInBounce 2.5s ease-in-out; /* A animação dura 1.5 segundos */
+}
+
+nav{
+    animation: fadeInBounce 2.5s ease-in-out;
+}

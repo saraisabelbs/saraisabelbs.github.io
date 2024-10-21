@@ -12,16 +12,27 @@
         </div>
     </header>
     <main>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="local.html">Localização</a>
-            <a href="multimedia.html">Multimédia</a>
-            <a href="info.html">Informação</a>
-            <a href="quizz.html">Quizz</a>
-            <a href="viagem.html">Viagem</a>
-            <a href="pontosinteresse.html">Pontos</a>
-            <a href="capitais.html">Capitais</a>
+        <nav class="menu">
+            <button class="menu-toggle">☰ Menu</button>
+            <ul>
+                <a href="index.html"><i class="fas fa-home"></i>  Home</a>
+                <a href="local.html"><i class="fas fa-map-marker-alt"></i>  Localização</a>
+                <a href="multimedia.html"><i class="fas fa-image"></i>  Multimédia</a>
+                <a href="info.html"><i class="fas fa-info-circle"></i>  Informação</a>
+                <a href="quizz.html"><i class="fas fa-question-circle"></i>  Quizz</a>
+                <a href="viagem.html"><i class="fas fa-plane"></i>  Viagem</a>
+                <a href="pontosinteresse.html"><i class="fas fa-star"></i>  Pontos de Interesse</a>
+                <a href="capitais.html"><i class="fas fa-globe"></i>  Capitais</a>
+            </ul>
+          
         </nav>
+        
+        <script>
+            document.querySelector('.menu-toggle').addEventListener('click', function() {
+                const menu = document.querySelector('.menu');
+                menu.classList.toggle('open'); // Alterna a classe "open"
+            });
+        </script>
 
         <br>
         <h3 id="Pontos de Interesse">Pontos de Interesse</h3>

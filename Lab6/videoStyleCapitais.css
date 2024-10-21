@@ -1,0 +1,45 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Remove scrollbars */
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.video-background video {
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o vídeo */
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza a barra de texto */
+    color: white;
+    text-align: center;
+    z-index: 1; /* Coloca a barra de texto acima do vídeo */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 2.5em; /* Tamanho do título */
+}
+
+p {
+    font-size: 1.2em; /* Tamanho do texto */
+}

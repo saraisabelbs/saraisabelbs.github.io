@@ -33,6 +33,11 @@ nav {
     justify-content: flex-end; /* Alinha para o lado direito */
 }
 
+.container {
+    display: grid; /* Defina o display como grid */
+    padding: 20px; /* Espaçamento interno */
+}
+
 img {
     margin: 0 auto;
     padding: 20px;
@@ -192,7 +197,7 @@ a:hover {
 }
 
 li:nth-child(odd) {
-    color:#f9f9f9;
+    color: #f9f9f9;
 }
 
 li:nth-child(even) {
@@ -276,61 +281,9 @@ nav a i {
     margin-right: 8px;
 }
 
-/* Dropdown */
-.dropdown {
-    display: none; /* Oculta o dropdown por padrão */
-    position: relative;
-    color: #ffffff; 
-    padding: 10px; 
-}
-
-.dropdown-content {
-    display: none; /* O conteúdo do dropdown está oculto por padrão */
-    position: absolute;
-    background-color: #c1eed9; /* Nova cor de fundo do dropdown */
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(41, 21, 221, 0.986);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: #000000; 
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #141b7e; /* Nova cor ao passar o rato */
-}
-
-.dropdown:hover .dropdown-content {
-    display: block; /* Mostra o dropdown ao passar o rato */
-}
-
-/* Media query para transformar o menu em dropdown */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column; 
-        align-items: flex-start; 
-    }
-
-    nav a {
-        display: none; /* Oculta todos os links do menu */
-    }
-
-    .dropdown {
-        display: inline-block; /* Exibe o dropdown */
-    }
-
-    .dropdown-content {
-        display: block; /* Mostra o dropdown em telas pequenas */
-    }
-}
-
 @media (max-width: 480px) {
-    body {
-        grid-template-columns: 1fr;
+    .container {
+        grid-template-columns: 1fr; /* Uma coluna para telas pequenas */
     }
     
     header {
@@ -339,25 +292,42 @@ nav a i {
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-    body {
-        grid-template-columns: 1fr 1fr; 
+    .container {
+        grid-template-columns: 1fr 1fr; /* Duas colunas para telas médias */
     }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    body {
-        grid-template-columns: 1fr 1fr 1fr; 
+    .container {
+        grid-template-columns: 1fr 1fr 1fr; /* Três colunas para telas grandes */
     }
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
-    body {
-        grid-template-columns: 1fr 1fr 1fr 1fr; 
+    .container {
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* Quatro colunas para telas ainda maiores */
     }
 }
 
 @media (min-width: 1441px) {
-    body {
-        grid-template-columns: repeat(5, 1fr);
+    .container {
+        grid-template-columns: repeat(5, 1fr); /* Cinco colunas para telas muito grandes */
+    }
+}
+
+@media (max-width: 600px) {
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+        width: 100%;
+    }
+
+    .menu.open ul {
+        display: flex;
     }
 }
