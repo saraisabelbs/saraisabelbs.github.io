@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Georgia', serif; 
+    background-color: #98ccc2;
+    color: #1c0581da;
+    text-align: center;
+    font-size: x-large; 
+  
+}
+
+header {
+    background-image: url('images/header.jpg');
+    padding: 150px 0;
+    text-align: center;
+    color: #dfdee4;
+    font-size: xx-large; 
+}
+
+.overlay {
+    background-color: rgba(255, 255, 255, 0.5);  
+    color: rgb(25, 22, 168);
+}
+
+nav {
+    background-color:#527E7F;
+    font-size: x-large;
+    padding: 20px 0;
+  
+} 
+
+img {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.fotografias img {
+    width: 609px;
+}
+
+.home img {
+    width: 609px;
+}
+
+iframe{
+    width: 700px;
+    height: 450px;
+
+}
+
+table{
+    border: #000000;
+    background-color: rgb(230, 243, 255);
+    margin: 0 auto;
+    width: 30%;
+}
+
+li{
+        color: rgb(50, 74, 168);
+}
+
+form {
+    background-color: rgb(241, 236, 165);
+    border: 2px solid #2001aa;
+    padding: 20px;       
+    margin-bottom: 20px;    
+    border-radius: 10px;  
+}
+
+fieldset{
+    border: 2px solid #2001aa;
+    padding: 20px;       
+    margin-bottom: 20px;    
+    border-radius: 10px;  
+    background-color: rgb(235, 246, 255);
+    color: #2001aa;
+    font-size: large; 
+
+}
+
+
+footer{
+    background-color:#527E7F;
+
+}
+
+section {
+    background-color: rgb(137, 196, 176);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    
+}
+
+a:hover {
+    background-color: #b1e5fa;
+    color: black;
+}
+
+
+.foto {
+    text-align: center; /* Centraliza o texto abaixo de cada imagem */
+}
+
+.foto img {
+    max-width: 100%; /* Garante que as imagens não ultrapassem o container */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+.fotografias {
+    padding: 20px;
+    border: 100px;
+    border-radius: 40px;
+    color: rgb(38, 48, 185);
+    text-align: center;
+    display: flex;
+
+}
+
+
+.iframeSpotify {
+    width: 60%;
+    height: 152px;
+}
+
+.frase-original {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.traducao {
+    visibility: hidden;
+    background-color: rgb(64, 181, 202);
+    color: #333;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    white-space: nowrap; /* Impede que a tradução quebre linhas */
+}
+
+.frase-original:hover .traducao {
+    visibility: visible;
+    opacity: 1;
+}
+
+.restaurantes{
+    display: flex;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as imagens se movam para a linha seguinte se o espaço não for suficiente */
+    justify-content: center; /* Centraliza as imagens */
+}
+
+.foto {
+    position: relative;
+    margin: 10px; /* Espaço entre as fotos */
+}
+
+.imagem-com-info {
+    width: 200px; /* Ajusta o tamanho da imagem conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.info {
+    visibility: hidden;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%; /* Coloca a mensagem acima da imagem */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.foto:hover .info {
+    visibility: visible;
+    opacity: 1;
+}
+
+.aviao{
+    display: flex;
+}
+
+
+li:nth-child(odd) {
+    color:#f9f9f9
+}
+
+li:nth-child(even) {
+    color: #4682B4; 
+}
+
+
+ul {
+    list-style-type:circle;
+    
+   
+}
+
+
+ol {
+    list-style-type: lower-roman; 
+}
+
+header h1 {
+    text-transform: uppercase;
+}
+
+li {
+    font-size: 2em;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 2px;
+    font-size: 12px;
+}
+
+table thead {
+    background-color: #4682B4;
+    color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+td:nth-child(2) {
+    font-style: italic;
+}
+
+td:nth-child(3) {
+    text-align: center;
+}
+
+
+.zoom {
+    cursor: zoom-in;
+    transition: transform 0.3s ease; 
+}
+
+
+.zoom:hover {
+    transform: scale(1.4); 
+
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5em;
+    padding: 10px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    display: none; /* Esconde os links normais */
+}
+
+nav a:link {
+    color: #ffffff;
+}
+
+nav a:visited {
+    color: #dcdcdc;
+}
+
+nav a:hover {
+    color: #57ffe3;
+}
+
+nav a:active {
+    color: #4733ff;
+}
+
+
+nav a i {
+    margin-right: 8px;
+}
+
+
+nav a:hover::before {
+    content: "🏛️ ";
+    transition: all 0.3s ease;
+}
+
+nav a:hover::after {
+    content: " 🏛️";
+    transition: all 0.3s ease;
+}
+
+/* Estilizar o menu */
+nav {
+    background-color: #527E7F;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #3c6566;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.classe-home{
+    background-color: #aaebe2;
+}
+
+/* Mobile portrait (até 480px) */
+@media (max-width: 480px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+    header {
+        font-size: 1.5em; /* Ajusta o tamanho do texto */
+    }
+}
+
+/* Mobile landscape (481px a 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+    body {
+        grid-template-columns: 1fr 1fr; /* Duas colunas */
+    }
+}
+
+/* Tablet (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        grid-template-columns: 1fr 1fr 1fr; /* Três colunas */
+    }
+}
+
+/* Laptop (1025px a 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    body {
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* Quatro colunas */
+    }
+}
+
+/* 4K (1441px e acima) */
+@media (min-width: 1441px) {
+    body {
+        grid-template-columns: repeat(5, 1fr); /* Cinco colunas */
+    }
+
+
+    /* Estilos do menu dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #527E7F; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    padding: 16px; /* Espaçamento interno */
+    font-size: x-large; /* Tamanho do texto */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Cursor de pointer para o botão */
+}
+
+/* O conteúdo do dropdown está oculto por padrão */
+.dropdown-content {
+    display: none; /* Esconde o conteúdo por padrão */
+    position: absolute; /* Posiciona o dropdown */
+    background-color: #f9f9f9; /* Cor de fundo */
+    min-width: 160px; /* Largura mínima do dropdown */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra */
+    z-index: 1; /* Z-index para garantir que aparece por cima */
+}
+
+/* Quando o botão do dropdown é clicado ou está em foco, mostrar o conteúdo */
+.dropdown:hover .dropdown-content {
+    display: block; /* Mostra o conteúdo ao passar o mouse */
+}
+
+.dropdown-content a {
+    color: black; /* Cor do texto dos links */
+    padding: 12px 16px; /* Espaçamento interno */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Faz com que os links ocupem a largura total */
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd; /* Cor ao passar o mouse */
+}
+
+/* Media query para transformar o menu em dropdown */
+@media (max-width: 768px) {
+
+
+    .dropdown {
+        display: block; /* Mostra o dropdown */
+    }
+
+    .dropbtn {
+        display: block; /* Mostra o botão */
+    }
+}
+
+}
