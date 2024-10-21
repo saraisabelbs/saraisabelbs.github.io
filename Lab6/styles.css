@@ -293,17 +293,6 @@ nav a i {
     margin-right: 8px;
 }
 
-
-nav a:hover::before {
-    content: "🏛️ ";
-    transition: all 0.3s ease;
-}
-
-nav a:hover::after {
-    content: " 🏛️";
-    transition: all 0.3s ease;
-}
-
 /* Estilizar o menu */
 nav {
     background-color: #527E7F;
