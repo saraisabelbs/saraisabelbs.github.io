@@ -44,7 +44,8 @@ img {
 }
 
 .fotografias img {
-    width: 609px;
+    width: 1000px;
+    height: 600px;
 }
 
 .home img {

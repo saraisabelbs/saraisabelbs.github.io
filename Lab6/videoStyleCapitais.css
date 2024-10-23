@@ -23,6 +23,21 @@ body, html {
     transform: translate(-50%, -50%); /* Centraliza o vídeo */
 }
 
+.navbar {
+    position: absolute; /* Pode ser fixed se você quiser que fique no topo mesmo ao rolar */
+    top: 10px; /* Ajuste conforme necessário */
+    left: 10px; /* Ajuste conforme necessário */
+    z-index: 2; /* Coloca a navbar acima do vídeo */
+    background-color: rgba(3, 3, 3, 0.7); /* Fundo semi-transparente */
+    padding: 10px; /* Espaçamento ao redor */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.last-link {
+    color: rgb(226, 226, 226); /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+}
+
 .overlay {
     position: absolute;
     top: 50%;
