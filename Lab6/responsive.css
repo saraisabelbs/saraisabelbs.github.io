@@ -1,290 +1,14 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Georgia', serif; 
-    background-color: #98ccc2;
-    color: #1c0581da;
-    text-align: center;
-    font-size: x-large; 
-}
-
-header {
-    background-image: url('images/header.jpg');
-    padding: 150px 0;
-    text-align: center;
-    color: #dfdee4;
-    font-size: xx-large; 
-}
-
-.overlay {
-    background-color: rgba(255, 255, 255, 0.5);  
-    color: rgb(25, 22, 168);
-}
-
-nav {
-    background-color: #4a7c8c; /* Nova cor de fundo */
-    font-size: x-large;
-    padding: 20px 0;
-    display: flex; /* Muda para flexbox */
-    justify-content: flex-end; /* Alinha para o lado direito */
-}
-
-.container {
-    display: grid; /* Defina o display como grid */
-    padding: 20px; /* Espaçamento interno */
-}
-
-img {
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.fotografias img {
-    width: 1000px;
-    height: 600px;
-}
-
-.home img {
-    width: 609px;
-}
-
-iframe {
-    width: 700px;
-    height: 450px;
-}
-
-table {
-    border: #000000;
-    background-color: rgb(230, 243, 255);
-    margin: 0 auto;
-    width: 30%;
-}
-
-li {
-    color: rgb(50, 74, 168);
-}
-
-form {
-    background-color: rgb(241, 236, 165);
-    border: 2px solid #2001aa;
-    padding: 20px;       
-    margin-bottom: 20px;    
-    border-radius: 10px;  
-}
-
-fieldset {
-    border: 2px solid #2001aa;
-    padding: 20px;       
-    margin-bottom: 20px;    
-    border-radius: 10px;  
-    background-color: rgb(235, 246, 255);
-    color: #2001aa;
-    font-size: large; 
-}
-
-footer {
-    background-color: #527E7F;
-}
-
-section {
-    background-color: rgb(137, 196, 176);
-    border-radius: 20px;
-    padding: 20px;
-    margin: 20px;
-}
-
-a:hover {
-    background-color: #b1e5fa;
-    color: black;
-}
-
-.foto {
-    text-align: center; 
-}
-
-.foto img {
-    max-width: 100%; 
-    height: auto; 
-}
-
-.fotografias {
-    padding: 20px;
-    border: 100px;
-    border-radius: 40px;
-    color: rgb(38, 48, 185);
-    text-align: center;
-    display: flex;
-}
-
-.iframeSpotify {
-    width: 60%;
-    height: 152px;
-}
-
-.frase-original {
+.menu {
     position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.traducao {
-    visibility: hidden;
-    background-color: rgb(64, 181, 202);
-    color: #333;
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.5s;
-    white-space: nowrap;
-}
-
-.frase-original:hover .traducao {
-    visibility: visible;
-    opacity: 1;
-}
-
-.restaurantes {
-    display: flex;
-}
-
-.galeria {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
-}
-
-.foto {
-    position: relative;
-    margin: 10px; 
-}
-
-.imagem-com-info {
-    width: 200px; 
-    height: auto; 
-}
-
-.info {
-    visibility: hidden;
-    background-color: #f9f9f9;
-    color: #333;
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%; 
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-.foto:hover .info {
-    visibility: visible;
-    opacity: 1;
-}
-
-.aviao {
-    display: flex;
-}
-
-li:nth-child(odd) {
-    color: #f9f9f9;
-}
-
-li:nth-child(even) {
-    color: #4682B4; 
-}
-
-ul {
-    list-style-type: circle;
-}
-
-ol {
-    list-style-type: lower-roman; 
-}
-
-header h1 {
-    text-transform: uppercase;
-}
-
-li {
-    font-size: 2em;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-    padding: 2px;
-    font-size: 12px;
-}
-
-table thead {
-    background-color: #4682B4;
-    color: white;
-}
-
-tbody tr:nth-child(odd) {
-    background-color: #f2f2f2;
-}
-
-td:nth-child(2) {
-    font-style: italic;
-}
-
-td:nth-child(3) {
-    text-align: center;
-}
-
-.zoom {
-    cursor: zoom-in;
-    transition: transform 0.3s ease; 
-}
-
-.zoom:hover {
-    transform: scale(1.4); 
-}
-
-nav a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 1.5em;
-    padding: 10px;
-    display: inline-block;
-    transition: all 0.3s ease;
-}
-
-nav a:link {
-    color: #ffffff;
-}
-
-nav a:visited {
-    color: #dcdcdc;
-}
-
-nav a:hover {
-    color: #57ffe3;
-}
-
-nav a:active {
-    color: #4733ff;
-}
-
-nav a i {
-    margin-right: 8px;
 }
 
 @media (max-width: 480px) {
-    .container {
-        grid-template-columns: 1fr; /* Uma coluna para telas pequenas */
+    body {
+        grid-template-columns: 1fr;
     }
     
     header {
@@ -293,42 +17,70 @@ nav a i {
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-    .container {
-        grid-template-columns: 1fr 1fr; /* Duas colunas para telas médias */
+    body {
+        grid-template-columns: 1fr 1fr; 
     }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    .container {
-        grid-template-columns: 1fr 1fr 1fr; /* Três colunas para telas grandes */
+    body {
+        grid-template-columns: 1fr 1fr 1fr; 
     }
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
-    .container {
-        grid-template-columns: 1fr 1fr 1fr 1fr; /* Quatro colunas para telas ainda maiores */
+    body {
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
     }
 }
 
 @media (min-width: 1441px) {
-    .container {
-        grid-template-columns: repeat(5, 1fr); /* Cinco colunas para telas muito grandes */
+    body {
+        grid-template-columns: repeat(5, 1fr);
     }
 }
 
+/* Media query para telas estreitas */
 @media (max-width: 600px) {
     .menu ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
+        display: none; /* Esconde o menu por padrão */
+        flex-direction: column; /* Organiza os itens verticalmente */
+        position: absolute; /* Posiciona o menu abaixo do botão */
+        background-color: #527E7F; /* Cor de fundo do menu */
+        width: 100%; /* Largura total */
+        z-index: 1; /* Garante que fique acima de outros elementos */
+    }
+    
+    .menu ul li {
+        text-align: center;
+        margin: 0;
     }
 
+    .menu ul li a {
+        display: block;
+        padding: 15px;
+    }
+
+    /* Mostra o botão para abrir o menu (hamburger) */
     .menu-toggle {
         display: block;
         width: 100%;
     }
 
+    /* Quando o menu está ativo (dropdown aberto) */
     .menu.open ul {
         display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .foto-bloco {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .foto-bloco {
+        flex: 1 1 100%;
     }
 }

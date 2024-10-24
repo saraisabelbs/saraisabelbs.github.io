@@ -169,11 +169,15 @@ a:hover {
     margin: 10px; /* Espaço entre as fotos */
 }
 
-.imagem-com-info {
-    width: 200px; /* Ajusta o tamanho da imagem conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
+.imagem-com-info1 {
+    width: 250px; /* Ajusta o tamanho da imagem conforme necessário */
+    height: 250px; 
 }
 
+.imagem-com-info2 {
+    width: 220px; /* Ajusta o tamanho da imagem conforme necessário */
+    height: 220px; 
+}
 .info {
     visibility: hidden;
     background-color: #f9f9f9;
@@ -211,8 +215,7 @@ li:nth-child(even) {
 
 ul {
     list-style-type:circle;
-    
-   
+    align-items: center;
 }
 
 
