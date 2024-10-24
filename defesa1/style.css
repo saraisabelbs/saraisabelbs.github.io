@@ -113,3 +113,37 @@ footer{
         font-size: 1.5em; 
     }
 }
+
+@media (max-width: 480px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+    
+    header {
+        font-size: 1.5em; 
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    body {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    body {
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+    }
+}
+
+@media (min-width: 1441px) {
+    body {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
