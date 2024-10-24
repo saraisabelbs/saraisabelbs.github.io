@@ -1,0 +1,55 @@
+header{
+    background-color: gainsboro;
+}
+
+html{
+    background-color: black;
+}
+
+h1{
+    font-size: larger;
+}
+
+footer{
+    background-color: grey;
+}
+
+btn:hover {
+    background-color: #45a049; /* Verde mais escuro ao passar o rato */
+}
+    
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas com largura igual */
+    gap: 10px; /* Espaço entre os itens */
+    padding: 10px;
+
+    
+}
+
+.grid-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    border: 1px  #ccc;
+    font-size: 18px;
+    border-radius: 10px;
+    
+}
+
+img{
+    width: 300px;
+    height: 300px;
+    align-items: left;
+    
+
+}
+
+button-container{
+    background-color: #ccc;
+    align-content: right;
+    margin: 10px; 
+    
+   
+
+}
