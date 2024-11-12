@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos em HTML e JavaScript</title>
+</head>
+
+<nav class="menu">
+    <ul>
+        <a href="../index.html">Página Inicial</a>
+        <a href="eventos.html">5 Eventos</a>
+    </ul>
+</nav>
+<body>
+
+    <div class="mensagem" id="mensagem" onmouseover="mudarMensagem()" onmouseout="restaurarMensagem()">1. Passe por aqui</div>
+    <br>
+
+    
+    <div id="mudaTexto">2. Pinta-me!</div>
+    <button onclick="mudarCorTexto('red')">Red</button>
+    <button onclick="mudarCorTexto('green')">Green</button>
+    <button onclick="mudarCorTexto('blue')">Blue</button>
+    <br><br>
+
+    <div>3. Experimenta escrever...</div>
+    <input type="text" id="caixaTexto" placeholder="" oninput="mudarCorCaixa()">
+    <br><br>
+
+    <div>4. Escolha uma cor em inglês:</div>
+    <input type="text" id="caixaCor" placeholder="">
+    <button onclick="mudarFundo()">Submeter</button>
+    <br><br>
+
+    <div>5. Conta:</div>
+    <button onclick="contar()">Conta!</button>
+    <div class="contador" id="contadorDisplay">0</div>
+
+    <script src="main.js"></script>
+</body>
+</html>
