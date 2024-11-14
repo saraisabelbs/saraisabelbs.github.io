@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos em HTML e JavaScript</title>
+    
+</head>
+<body>
+    <div id="mensagem" onmouseover="mudarMensagem()" onmouseout="restaurarMensagem()">1. Passa por aqui!</div>
+    <br>
+
+    <div id="mudaTexto">2. Pinta-me</div>
+    <button data-color="red">Red</button>
+    <button data-color="green">Green</button>
+    <button data-color="blue">Blue</button>
+    <br><br>
+    
+
+    <div>3. Experimenta escrever...</div><br>
+    <input type="text" id="caixaTexto" placeholder="" oninput="mudarCorCaixa()">
+    <br><br>
+
+    <div>4. Escolha uma cor:
+        <select id="caixaCor" onchange="mudarFundo()">
+            <option value="white">White</option>
+            <option value="blue">Blue</option>
+            <option value="red">Red</option>
+        </select>
+        <br><br>
+    </div>
+    
+
+    <div>5.
+    <button onclick="contar()">Conta!</button>
+    <span id="contadorDisplay" class="contador">0</span>
+    <br><br>
+    </div><br>
+
+    <div>6. <input type="text" id="inputNome" placeholder="Nome">
+    <input type="number" id="inputIdade" placeholder="Idade">
+    <button onclick="mostrarMensagem()">Submit</button></div>
+    <p id="mensagemIdade"></p>
+    <br>
+
+    <div>7. Automatic Counter: <span id="contadorAutomatico" class="automatico">0</span></div>
+
+    <div>8. (novo) Contador Automático: <span id="novoContador">0</span></div>
+    
+    <script src="eventos.js"></script>
+</body>
+</html>
+
+
