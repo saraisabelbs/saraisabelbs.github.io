@@ -9,11 +9,11 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-image: url("fundinho.jpg");
+    background-color: #FDE962;
 }
 
 header {
-    background-color: #FDE962;
+    background-image: url("apaga.jpeg");
     padding: 10px;
     display:flex;
     justify-content:space-between;
@@ -31,6 +31,7 @@ footer{
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    text-align: center;
 
 }
 
@@ -50,11 +51,11 @@ article{
     display: flex;
     flex-wrap: wrap;  /* Permite que os produtos se ajustem em várias linhas */
     justify-content: space-between; /* Distribui os produtos igualmente com espaços entre eles */
-    gap: 20px;  /* Espaço entre os artigos */
+    gap: 10px;  /* Espaço entre os artigos */
 }
 
 .produto {
-    width: 20%;  /* Define a largura de cada artigo (aproximadamente 3 produtos por linha) */
+    width: 60%;  /* Define a largura de cada artigo (aproximadamente 3 produtos por linha) */
     padding: 15px;
     border-radius: 10px;  /* Bordas arredondadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave */
@@ -100,8 +101,55 @@ article{
 }
 
 #produtos article {
-    width: 25%;
+    width: 32%;
     margin: 20px 0; /* Adiciona margem nas laterais e entre as linhas de produtos */
     box-sizing: border-box; /* Garante que o padding e margin não afetem o cálculo da largura */
+}
+
+#cesto {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column; /* Organiza elementos verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    padding: 20px;
+    gap: 20px; /* Espaçamento entre os elementos */
+    border-radius: 10px; /* Cantos arredondados */
+    width: 100%; /* Define uma largura máxima */
+    margin: 0 auto; /* Centraliza a seção na página */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+/* Estilo do título */
+#cesto h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Lista de produtos no cesto */
+#listaCesto {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha caso necessário */
+    justify-content: center; /* Centraliza os produtos */
+    gap: 20px; /* Espaçamento entre os produtos */
+    list-style: none; /* Remove os marcadores padrão da lista */
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo das imagens dos produtos */
+#listaCesto li img {
+    max-width: 100px; /* Define uma largura máxima para as imagens */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Estilo do custo total */
+#totalCesto {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
 }
 
