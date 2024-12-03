@@ -9,7 +9,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: #FDE962;
+    background-image: url("background-1747775_1920.jpg");
 }
 
 header {
@@ -175,6 +175,8 @@ article{
     border: 1px solid #ccc;
     background-color: #f9f9f9;
     width: 200px;
+   
+    
     
    
 }
@@ -199,6 +201,7 @@ article{
     border: 1px solid #ccc;
     background-color: #f9f9f9;
     width: 200px;
+    
 }
 
 #ordenada option {
@@ -221,5 +224,6 @@ article{
     border: 1px solid #ccc;
     background-color: #f9f9f9;
     width: 200px;
+
 }
 
