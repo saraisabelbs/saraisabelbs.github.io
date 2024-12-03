@@ -13,12 +13,20 @@ body, html {
 }
 
 header {
-    background-image: url("apaga.jpeg");
+   background-color: #fff;
     padding: 10px;
     display:flex;
     justify-content:space-between;
     width: 100%;
 }
+
+h1 {
+    text-align: center; /* Centraliza o texto dentro do h1 */
+    display: block; /* Garante que o h1 se comporta como um bloco */
+    margin-left: auto; /* Ajusta a margem esquerda automaticamente */
+    margin-right: auto; /* Ajusta a margem direita automaticamente */
+}
+
 nav a {
     text-decoration: none;
     color: #000000;

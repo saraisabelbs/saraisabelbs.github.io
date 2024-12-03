@@ -12,8 +12,9 @@
 <body>
 
     <header>
+        <img src="deisi.png" alt="Logo" id="logo">
 
-        <h1>Loja</h1>
+        <h1>Loja DEISI</h1>
 
         <nav>
             <a href="#produtos">Produtos</a>
@@ -44,37 +45,27 @@
  </section>
 
 
-
-
-
-
-
-        
-
         
         <section id="produtos"> 
         </section>
 
         <section id="cesto">
+
             <h2>Produtos Selecionados</h2>
             <ul id="listaCesto"></ul>
-            <form>
-                <h3 id="totalCesto"><strong>Custo total: </strong> 0.00€</h3>
-                <label for="deisi">És estudante do DEISI?</label>
-                    <input type="checkbox" id="deisi">
-                    <br>
-                    <label for="cupao">Cupão de desconto:</label>
-                    <input type="text" id="cupao" placeholder="Insere o cupão">
-                    <br>
-                    <button type="button" id="comprarBtn">Comprar</button>
-                    <div class="result">
-                    <p>Valor final a pagar (com eventuais descontos): <span class="reference" id="valorFinal">35.50 €</span></p>
-                    <p>Referência de pagamento: <span class="reference" id="referenciaPagamento">011124-0049</span></p>
-                    </div>
-            </form>
-            
+            <h3 id="totalCesto"><strong>Custo total: </strong> 0.00€</h3>
+
+            <label>És estudante do DEISI?</label>
+            <input type="checkbox" id="simounao">
+
+            <label>Cupão de desconto: </label>
+            <input type="text" id="desconto">
 
 
+
+    <button type="button" id="finalizarCompra" onclick="realizarCompra()">Comprar</button>
+
+        </section>
     </main>
 
     <footer>
