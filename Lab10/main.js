@@ -136,3 +136,240 @@ function removerProdutoDoCesto(index) {
 
     atualizarCesto();
 }
+
+// URL da API DEISI Shop (você precisa obter a URL correta no enunciado ou documentação)
+const apiURL = "https://deisishop.pythonanywhere.com/products/";
+
+// Fazer o pedido
+fetch(apiURL)
+  .then(response => {
+    // Verificar se a resposta é válida (status 200)
+    if (!response.ok) {
+        throw new Error(`Erro ao obter os produtos: ${response.status}`);
+    }
+    // Converter a resposta para JSON
+    return response.json();
+  })
+  .then(data => {
+    // Processar os dados dos produtos
+    console.log("Produtos obtidos:", data);
+    // Aqui você pode atualizar a página com os produtos
+    carregarProdutos(data);
+  })
+  .catch(error => {
+    // Lidar com erros
+    console.error("Erro ao buscar os produtos:", error);
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    carregarProdutos(produtos);
+    carregarCesto();
+    carregarCategorias();
+});
+
+function carregarCategorias() {
+    // Obter as categorias únicas dos produtos
+    const categorias = [...new Set(produtos.map(produto => produto.category))];
+
+    // Obter o elemento select
+    const selectCategoria = document.getElementById('categoria');
+
+    // Preencher o select com as opções de categoria
+    categorias.forEach(categoria => {
+        const option = document.createElement('option');
+        option.value = categoria;
+        option.textContent = categoria;
+        selectCategoria.appendChild(option);
+    });
+
+    // Adicionar o evento de mudança para filtrar os produtos
+    selectCategoria.addEventListener('change', function () {
+        const categoriaSelecionada = this.value;
+        filtrarProdutos(categoriaSelecionada);
+    });
+}
+
+function filtrarProdutos(categoria) {
+    const produtosFiltrados = categoria === 'todos' 
+        ? produtos 
+        : produtos.filter(produto => produto.category === categoria);
+
+    carregarProdutos(produtosFiltrados);
+}
+
+function carregarProdutos(produtos) {
+    const sectionProdutos = document.getElementById('produtos');
+    sectionProdutos.innerHTML = ''; 
+
+    produtos.forEach(produto => {
+        const artigo = criarProduto(produto);
+        sectionProdutos.appendChild(artigo);
+    });
+
+    const botoesAdicionar = sectionProdutos.querySelectorAll('.produto button');
+    botoesAdicionar.forEach(botao => {
+        botao.addEventListener('click', function () {
+            const produtoId = parseInt(this.getAttribute('data-id'));
+            const produtoSelecionado = produtos.find(p => p.id === produtoId);
+            adicionarAoCesto(produtoSelecionado);
+        });
+    });
+}
+
+function criarProduto(produto) {
+    const artigo = document.createElement('article');
+    artigo.classList.add('produto');
+
+    artigo.innerHTML = `
+        <img src="${produto.image}" alt="${produto.title}">
+        <h3>${produto.title}</h3>
+        <p>${produto.description}</p>
+        <p><strong>Preço:</strong> $${produto.price}</p>
+        <p><strong>Categoria:</strong> ${produto.category}</p>
+        <p><strong>Avaliação:</strong> ${produto.rating.rate} (${produto.rating.count} avaliações)</p>
+        <button data-id="${produto.id}">+ Adicionar ao Cesto</button>
+    `;
+
+    return artigo;
+}
+
+// O restante do código permanece igual.
+document.addEventListener('DOMContentLoaded', function () {
+    const apiURL = "https://deisishop.pythonanywhere.com/products/";
+    let produtos = []; // Armazena todos os produtos obtidos da API.
+
+    // Carregar produtos da API e inicializar a página
+    fetch(apiURL)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Erro ao obter os produtos: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            produtos = data; // Atualiza a lista de produtos
+            carregarProdutos(produtos); // Exibe os produtos
+            carregarCategorias(produtos); // Preenche o select com categorias
+        })
+        .catch(error => {
+            console.error("Erro ao buscar os produtos:", error);
+        });
+
+    // Função para carregar categorias no select
+    function carregarCategorias(produtos) {
+        const categorias = [...new Set(produtos.map(produto => produto.category))];
+        const selectCategoria = document.getElementById('categoria');
+
+        categorias.forEach(categoria => {
+            const option = document.createElement('option');
+            option.value = categoria;
+            option.textContent = categoria;
+            selectCategoria.appendChild(option);
+        });
+
+        // Evento para filtrar os produtos pela categoria selecionada
+        selectCategoria.addEventListener('change', function () {
+            const categoriaSelecionada = this.value;
+            filtrarProdutos(categoriaSelecionada);
+        });
+    }
+
+    // Função para filtrar produtos por categoria
+    function filtrarProdutos(categoria) {
+        const produtosFiltrados = categoria === 'todos'
+            ? produtos
+            : produtos.filter(produto => produto.category === categoria);
+
+        carregarProdutos(produtosFiltrados);
+    }
+
+    // Função para carregar produtos no DOM
+    function carregarProdutos(produtos) {
+        const sectionProdutos = document.getElementById('produtos');
+        sectionProdutos.innerHTML = ''; // Limpa os produtos existentes
+
+        produtos.forEach(produto => {
+            const artigo = criarProduto(produto);
+            sectionProdutos.appendChild(artigo);
+        });
+
+        const botoesAdicionar = sectionProdutos.querySelectorAll('.produto button');
+        botoesAdicionar.forEach(botao => {
+            botao.addEventListener('click', function () {
+                const produtoId = parseInt(this.getAttribute('data-id'));
+                const produtoSelecionado = produtos.find(p => p.id === produtoId);
+                adicionarAoCesto(produtoSelecionado);
+            });
+        });
+    }
+
+    // Função para criar o elemento HTML de um produto
+    function criarProduto(produto) {
+        const artigo = document.createElement('article');
+        artigo.classList.add('produto');
+
+        artigo.innerHTML = `
+            <img src="${produto.image}" alt="${produto.title}">
+            <h3>${produto.title}</h3>
+            <p>${produto.description}</p>
+            <p><strong>Preço:</strong> $${produto.price}</p>
+            <p><strong>Categoria:</strong> ${produto.category}</p>
+            <p><strong>Avaliação:</strong> ${produto.rating.rate} (${produto.rating.count} avaliações)</p>
+            <button data-id="${produto.id}">+ Adicionar ao Cesto</button>
+        `;
+
+        return artigo;
+    }
+
+
+
+// Adiciona eventos para ordenar os produtos por preço
+const selectOrdenacao = document.getElementById('ordenacao');
+
+selectOrdenacao.addEventListener('change', function () {
+    const ordenacao = this.value;
+    ordenarProdutos(ordenacao);
+});
+
+// Função para ordenar os produtos
+function ordenarProdutos(ordenacao) {
+    let produtosOrdenados;
+
+    if (ordenacao === 'preco-crescente') {
+        produtosOrdenados = [...produtos].sort((a, b) => a.price - b.price);
+    } else if (ordenacao === 'preco-decrescente') {
+        produtosOrdenados = [...produtos].sort((a, b) => b.price - a.price);
+    } else {
+        produtosOrdenados = [...produtos]; // Mantém a ordem original, sem alteração
+    }
+
+    carregarProdutos(produtosOrdenados); // Carrega os produtos ordenados
+}
+
+  // Função para filtrar produtos por nome
+  const inputPesquisa = document.getElementById('pesquisa');
+  inputPesquisa.addEventListener('input', function () {
+      const termoPesquisa = this.value.toLowerCase(); // Obtém o termo de pesquisa
+      filtrarPorNome(termoPesquisa);
+  });
+
+  // Função para filtrar produtos pelo nome
+  function filtrarPorNome(termoPesquisa) {
+      const produtosFiltrados = produtos.filter(produto => {
+          return produto.title.toLowerCase().includes(termoPesquisa); // Verifica se o nome contém o termo
+      });
+
+      carregarProdutos(produtosFiltrados); // Exibe os produtos filtrados
+  }
+
+
+  
+});
+
+
+
+
+
+
+
+
