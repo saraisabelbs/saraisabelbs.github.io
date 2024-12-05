@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"  /link>
+    <title>Lab 10</title>
+
+</head>
+
+<body>
+
+    <header>
+        <img src="deisi.png" alt="Logo" id="logo">
+
+        <h1>Loja DEISI</h1>
+
+        <nav>
+            <a href="#produtos">Produtos</a>
+            <a href="#cesto">Cesto</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <h2>Selecione os seus Produtos</h2>
+        <section>
+            <label for="categoria" class="label-categoria">Filtrar:</label>
+            <select id="categoria">
+            <option value="todos">Todas as categorias</option>
+        </select>
+   
+    <label for="ordenacao" class="label-ordenada">Ordenar</label>
+    <select id="ordenacao">
+        <option value="ordenar-preco" selected>Ordenar pelo rating</option>
+        <option value="preco-crescente">rating Crescente</option>
+        <option value="preco-decrescente">rating Decrescente</option>
+    </select>
+
+    <label for="pesquisa" class="label-pesquisa">Procurar</label>
+    <input type="text" id="pesquisa" placeholder="pesquise por produto">
+    
+ </section>
+
+
+        
+        <section id="produtos"> 
+        </section>
+
+        <section id="cesto">
+
+            <h2>Produtos Selecionados</h2>
+            <ul id="listaCesto"></ul>
+            <h3 id="totalCesto"><strong>Custo total: </strong> 0.00€</h3>
+
+            <label>És estudante do DEISI?</label>
+            <input type="checkbox" id="simounao">
+
+            <label>Cupão de desconto: </label>
+            <input type="text" id="desconto">
+
+
+
+    <button type="button" id="finalizarCompra" onclick="realizarCompra()">Comprar</button>
+    <button type="button" id="adicionarTudo" onclick="adicionarTudo()">Adicionar Tudo</button>
+
+        </section>
+    </main>
+
+    <footer>
+        2024
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
+
+
