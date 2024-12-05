@@ -402,6 +402,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 adicionarAoCesto(produtoSelecionado);
             });
         });
+
+        const botoesAdicionarTudo = sectionProdutos.querySelectorAll('.produto button');
+        botoesAdicionar.forEach(botao => {
+            botao.addEventListener('click', function () {
+                const produtoId = parseInt(this.getAttribute('data-id'));
+                const produtosSelecionados = [...produtos].find(p => p.id === produtoId);
+                adicionarAoCesto(produtosSelecionados);
+            });
+        });
     }
 
     // Função para criar o elemento HTML de um produto
