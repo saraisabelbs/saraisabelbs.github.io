@@ -21,6 +21,15 @@ function carregarProdutos(produtos) {
             adicionarAoCesto(produtoSelecionado);
         });
     });
+
+    const botoesAdicionarTudo = sectionProdutos.querySelectorAll('.produto button');
+    botoesAdicionar.forEach(botao => {
+        botao.addEventListener('click', function () {
+            const produtoId = parseInt(this.getAttribute('data-id'));
+            const produtoSelecionado = [...produtos].find(p => p.id === produtoId);
+            adicionarAoCesto(produtoSelecionado);
+        });
+    });
 }
 
 
@@ -148,7 +157,8 @@ function removerDoCesto(index) {
 // Função para adicionar um produto ao cesto
 function adicionarAoCesto(produto) {
 
-    cesto.adicionarProduto(produto); // Adiciona ao cesto
+    cesto.adicionarProduto(produto); 
+    cesto.adicionarProdutoTudo(produto);// Adiciona ao cesto
     localStorage.setItem('cesto', JSON.stringify(cesto.produtos)); // Atualiza o localStorage
     atualizarCesto(); // Atualiza o DOM
 }
