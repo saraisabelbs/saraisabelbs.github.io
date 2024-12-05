@@ -436,9 +436,9 @@ selectOrdenacao.addEventListener('change', function () {
 function ordenarProdutos(ordenacao) {
     let produtosOrdenados;
 
-    if (ordenacao === 'preco-crescente') {
+    if (ordenacao === 'rating-crescente') {
         produtosOrdenados = [...produtos].sort((a, b) => a.rating.rate.count - b.rating.rate.count);
-    } else if (ordenacao === 'preco-decrescente') {
+    } else if (ordenacao === 'rating-decrescente') {
         produtosOrdenados = [...produtos].sort((a, b) => b.rating.rate.count - a.rating.rate.count);
     } else {
         produtosOrdenados = [...produtos]; // Mantém a ordem original, sem alteração
