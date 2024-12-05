@@ -472,10 +472,6 @@ function ordenarProdutos(ordenacao) {
       carregarProdutos(produtosFiltrados); // Exibe os produtos filtrados
   }
 
-
-
-  
-  
 });
 
 
